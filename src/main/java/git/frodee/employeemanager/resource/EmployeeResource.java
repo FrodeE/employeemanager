@@ -48,8 +48,5 @@ public class EmployeeResource {
     public ResponseEntity<?> deleteEmployee(@PathVariable("id") Long id){
         employeeService.deleteEmployee(id);
         return new ResponseEntity<>(HttpStatus.OK);
-
     }
-
-
 }
