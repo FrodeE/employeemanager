@@ -37,9 +37,7 @@ public class EmployeeServiceImpl implements EmployeeService{
                 .orElseThrow(() -> new UserNotFoundException("User by id " + id + " was not found"));
     }
 
-    public void deleteEmployee(Long id){
-        employeeRepo.deleteEmployeeById(id);
+    public void deleteById(Long id){
+        employeeRepo.deleteById(id);
     }
-
-
 }
