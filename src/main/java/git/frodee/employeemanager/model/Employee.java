@@ -1,6 +1,7 @@
 package git.frodee.employeemanager.model;
 
 import jakarta.persistence.*;
+
 import java.io.Serializable;
 
 @Entity // This class is configured to any database being used
@@ -17,9 +18,10 @@ public class Employee implements Serializable { //Serializable is used to use th
     @Column(nullable = false, updatable = false)            //EmployeeCode can never be updated in our database (unique)
     private String employeeCode;
 
-    public Employee() {}
+    public Employee() {
+    }
 
-    public Employee(String name, String email, String jobTitle, String phone, String imageUrl, String employeeCode){
+    public Employee(String name, String email, String jobTitle, String phone, String imageUrl, String employeeCode) {
         this.name = name;
         this.email = email;
         this.jobTitle = jobTitle;
@@ -28,64 +30,64 @@ public class Employee implements Serializable { //Serializable is used to use th
         this.employeeCode = employeeCode;
     }
 
-    public long getId(){
+    public long getId() {
         return id;
     }
 
-    public void setId(Long id){
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public String getName(){
+    public String getName() {
         return name;
     }
 
-    public void setName(String name){
+    public void setName(String name) {
         this.name = name;
     }
 
-    public String getEmail(){
+    public String getEmail() {
         return email;
     }
 
-    public void setEmail(String email){
+    public void setEmail(String email) {
         this.email = email;
     }
 
-    public String getJobTitle(){
+    public String getJobTitle() {
         return jobTitle;
     }
 
-    public void setJobTitle(String jobTitle){
+    public void setJobTitle(String jobTitle) {
         this.jobTitle = jobTitle;
     }
 
-    public String getPhone(){
+    public String getPhone() {
         return phone;
     }
 
-    public void setPhone(String phone){
+    public void setPhone(String phone) {
         this.phone = phone;
     }
 
-    public String getImageUrl(){
+    public String getImageUrl() {
         return imageUrl;
     }
 
-    public void setImageUrl(String imageUrl){
+    public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
     }
 
-    public String getEmployeeCode(){
+    public String getEmployeeCode() {
         return employeeCode;
     }
 
-    public void setEmployeeCode(String employeeCode){
+    public void setEmployeeCode(String employeeCode) {
         this.employeeCode = employeeCode;
     }
 
     @Override
-    public String toString(){           //Used for debugging purposes to print out the contents
+    public String toString() {           //Used for debugging purposes to print out the contents
         return "Employee{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
